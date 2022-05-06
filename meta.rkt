@@ -1,11 +1,7 @@
 #lang racket
 
-(require memo)
-
 (require racket/hash)
-
 (require racket/pretty)
-
 (provide reduce!
          unfold!
          eval-lift

@@ -208,5 +208,5 @@
             (update-ctx ctx fctx)
             (vector-set! hit-method i tree-node-hit))))))
 
-; (test-correctness)
+(test-correctness)
 (test-time)

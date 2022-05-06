@@ -1,11 +1,7 @@
 #lang racket
 
-(require memo)
-
 (require racket/hash)
-
 (require racket/pretty)
-
 (require "meta.rkt")
 
 (provide read-from-file

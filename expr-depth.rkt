@@ -2,9 +2,6 @@
 
 
 (require racket/hash)
-
-(require racket/pretty)
-
 (require "meta.rkt")
 (require "lisp-analysis.rkt")
 (require "array-utils.rkt")
@@ -210,64 +207,7 @@
                   (update-ctx ctx fctx)
                   (vector-set! hit-method i expr-hit))))))))
 
-; (test-time)
 
-(test-initial-iteration)
-; (test-correctness)
-
-; (define program
-;   (list-to-mlist '(+ 1 (+ 2 (+ 3 (+ 4 5))))))
-;
-; (set! expr-hit 0)
-;
-; (define base-result (expr-depth program))
-;
-; ;
-; (set-box! (expr-depth) (hasheq)) ; clear cache
-;
-; (define ctx (unbox (expr-depth)))
-;
-; (define bctx (make-hasheq))
-;
-; (define fctx (make-hasheq))
-;
-; (define expr (unfold! ctx bctx 'expr-depth expr-depth-m `(expr-depth ,program)))
-;
-; (define result (eval-lift bctx fctx expr))
-; result
-; base-result
-;
-;
-; (set! ctx (update-ctx ctx fctx))
-;
-; ctx
-;
-; bctx
-;
-;
-; fctx
-;
-; expr
-;
-; (hash-ref ctx program)
-; (hash-ref ctx (mcdr (mcdr (mcdr program))))
-;
-;
-; (define method-result (expr-depth program))
-
-;
-; (mutate-expr-rand! program callback)
-;
-; (define ctx (unbox (expr-depth)))
-;
-; (define bctx (make-hasheq))
-;
-; (define fctx (make-hasheq))
-;
-; (define expr (unfold! ctx bctx 'expr-depth expr-depth-m `(expr-depth ,program)))
-;
-; (define result (eval-lift bctx fctx expr))
-;
-; (define base-result (expr-depth program))
-;
-; (define new-ctx (update-ctx ctx fctx))
+; (test-initial-iteration)
+(test-correctness)
+(test-time)

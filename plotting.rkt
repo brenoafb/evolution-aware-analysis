@@ -2,7 +2,6 @@
 
 (require plot)
 (require plot/no-gui)
-
 (provide vector-zip
          vector-range
          make-points
